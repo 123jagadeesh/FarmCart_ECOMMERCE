@@ -11,7 +11,6 @@ const notificationRoutes = require("./routes/notificationRoutes")
 const customerRoutes = require("./routes/customerRoutes");
 const adminRoutes = require("./routes/adminRoutes");
 const orderRoutes = require("./routes/orderRoutes");
-const mapApiRoutes = require("./routes/map_routes");
 connectDB();
 
 app.use(bodyParser.json({ limit: "10mb" }));
@@ -37,7 +36,6 @@ app.use("/api/farmer", farmerRoutes);
 app.use("/api/customer",customerRoutes);
 app.use("/api/admin",adminRoutes);
 app.use("/api/orders",orderRoutes);
-app.use("/api/location",mapApiRoutes);
 app.use("/api/notification",notificationRoutes);
 
 app.listen(5000, () => {

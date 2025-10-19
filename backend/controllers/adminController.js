@@ -92,7 +92,7 @@ exports.changeStatusFarmer = async (req, res) => {
         res.status(200).json({ message: `Farmer ${verificationStatus} successfully`, farmer });
     } catch (error) {
         res.status(500).json({ error: "Internal server error" });
-    }
+  }
 };
 
 exports.changeStatusProduct = async (req, res) => {
